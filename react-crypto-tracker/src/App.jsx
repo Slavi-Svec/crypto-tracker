@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import axios from 'axios'
+import CoinInfo from './Components/CoinInfo/CoinInfo'
 import './App.scss'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       .then(res => {
         setCoins(res.data)
         console.log(res.data)
+        console.log(res.data[5].symbol)
       })
 
       .catch(error => console.error(error))
@@ -22,7 +24,7 @@ const App = () => {
   return (
     <section className="app">
       <div className="app__header">
-        <h1 className="app__head">CryptoTracker.link</h1>
+        <h1 className="app__heading">CryptoTracker.link</h1>
         <form>
           <input
             className="app__input-field"
@@ -30,6 +32,7 @@ const App = () => {
             placeholder="Search a coin"
           />
         </form>
+        <CoinInfo />
       </div>
     </section>
   )
