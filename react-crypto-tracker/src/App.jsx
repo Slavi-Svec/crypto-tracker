@@ -38,7 +38,18 @@ const App = () => {
       </div>
       <div className=" app__container">
         {filteredCoinInfo.map(coin => {
-          return <CoinInfo key={coin.id} name={coin.name} />
+          return (
+            <CoinInfo
+              key={coin.id}
+              name={coin.name}
+              price={coin.current_price}
+              ath={coin.ath}
+              symbol={coin.symbol}
+              marketcap={coin.market_cap}
+              volume={coin.total_volume}
+              image={coin.image}
+            />
+          )
         })}
       </div>
     </section>
