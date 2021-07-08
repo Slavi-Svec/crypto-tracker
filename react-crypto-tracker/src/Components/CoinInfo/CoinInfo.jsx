@@ -25,9 +25,17 @@ const CoinInfo = ({
           Market Cap: ${marketcap.toLocaleString()}
         </p>
         <p className="coin__volume">Volume (24H): ${volume.toLocaleString()}</p>
-      </div>
-      <div className="coin__price-indicator">
-        <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
+        {(() => {
+          if (priceChange < 0) {
+            return (
+              <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
+            )
+          } else {
+            return (
+              <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
+            )
+          }
+        })()}
       </div>
     </section>
   )
