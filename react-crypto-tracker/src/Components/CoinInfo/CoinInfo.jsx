@@ -2,13 +2,13 @@ import React from 'react'
 import './CoinInfo.scss'
 
 const CoinInfo = ({
+  image,
+  symbol,
   name,
   price,
   ath,
-  symbol,
   marketcap,
   volume,
-  image,
   priceChange
 }) => {
   return (
@@ -28,11 +28,25 @@ const CoinInfo = ({
         {(() => {
           if (priceChange < 0) {
             return (
-              <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
+              <div className="coin__price-indicator">
+                <div className="coin__price-down">
+                  <i className="fas fa-caret-down fa-2x"></i>
+                  <p className="coin__price-change">
+                    {priceChange.toFixed(2)}%
+                  </p>
+                </div>
+              </div>
             )
           } else {
             return (
-              <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
+              <div className="coin__price-indicator">
+                <div className="coin__price-up">
+                  <i className="fas fa-caret-up fa-2x"></i>
+                  <p className="coin__price-change">
+                    {priceChange.toFixed(2)}%
+                  </p>
+                </div>
+              </div>
             )
           }
         })()}

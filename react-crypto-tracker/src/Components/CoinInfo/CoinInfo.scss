@@ -35,4 +35,32 @@
     font-weight: 500;
     padding-left: 8px;
   }
+
+  &__price-indicator {
+    flex-direction: row;
+    border-radius: 2;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    padding: 16px;
+  }
+
+  &__price-up {
+    background-color: #11d811;
+    height: 68px;
+  }
+
+  &__price-down {
+    background-color: #f00606;
+    height: 68px;
+  }
+
+  .fa-1x {
+    font-size: 32px;
+  }
+  svg {
+    background-color: transparent;
+  }
 }
