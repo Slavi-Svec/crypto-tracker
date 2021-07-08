@@ -48,6 +48,7 @@ const App = () => {
               marketcap={coin.market_cap}
               volume={coin.total_volume}
               image={coin.image}
+              priceChange={coin.price_change_percentage_24h}
             />
           )
         })}

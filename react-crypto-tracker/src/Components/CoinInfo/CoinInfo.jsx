@@ -1,7 +1,16 @@
 import React from 'react'
 import './CoinInfo.scss'
 
-const CoinInfo = ({ name, price, ath, symbol, marketcap, volume, image }) => {
+const CoinInfo = ({
+  name,
+  price,
+  ath,
+  symbol,
+  marketcap,
+  volume,
+  image,
+  priceChange
+}) => {
   return (
     <section className="coin">
       <div className="coin__crypto-coin">
@@ -16,6 +25,9 @@ const CoinInfo = ({ name, price, ath, symbol, marketcap, volume, image }) => {
           Market Cap: ${marketcap.toLocaleString()}
         </p>
         <p className="coin__volume">Volume (24H): ${volume.toLocaleString()}</p>
+      </div>
+      <div className="coin__price-indicator">
+        <p className="coin__price-change">{priceChange.toFixed(2)}%</p>
       </div>
     </section>
   )
