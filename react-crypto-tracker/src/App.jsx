@@ -17,6 +17,7 @@ const App = () => {
       )
       .then(res => {
         setCoins(res.data)
+        console.log(res.data)
       })
 
       .catch(error => console.error(error))
@@ -39,7 +40,7 @@ const App = () => {
           <input
             className="app__input-field"
             type="text"
-            placeholder="Search a Coin"
+            placeholder="Search a Coin in AUD"
             onChange={handleChange}
           />
         </form>
