@@ -2,15 +2,16 @@
   &__crypto-coin {
     overflow: hidden;
     text-align: center;
+    border-radius: 1rem;
     position: relative;
     width: 320px;
-    margin: 32px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 1);
+    margin: 2rem;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   }
 
   &__coin-logo {
-    width: 128px;
-    margin-top: 19.2px;
+    width: 8rem;
+    margin-top: 1.2rem;
     height: 40px;
     width: 40px;
     clip-path: circle(60px at center);
@@ -26,12 +27,12 @@
 
   &__name {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   &__symbol {
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     padding-left: 8px;
   }
@@ -42,9 +43,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 16px;
+    border: none;
+    font-size: 1rem;
     color: white;
-    padding: 16px;
+    padding: 1rem;
   }
 
   &__price-up {
@@ -58,9 +60,41 @@
   }
 
   .fa-1x {
-    font-size: 32px;
+    font-size: 2em;
   }
+
   svg {
     background-color: transparent;
+  }
+
+  &__price-change {
+    background-color: transparent;
+    padding-left: 10px;
+    text-shadow: 0 0 12px black;
+    font-size: 18px;
+  }
+
+  &__price {
+    background-color: transparent;
+    width: auto;
+  }
+
+  &__ath {
+    padding-top: 8px;
+    background-color: transparent;
+    width: auto;
+  }
+
+  &__market-cap {
+    background-color: transparent;
+    width: auto;
+    padding-top: 8px;
+  }
+
+  &__volume {
+    background-color: transparent;
+    width: auto;
+    padding-top: 6px;
+    padding-bottom: 8px;
   }
 }
