@@ -5,13 +5,13 @@
     border-radius: 1rem;
     position: relative;
     width: 320px;
-    margin: 2rem;
+    margin: 32px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   }
 
   &__coin-logo {
     width: 8rem;
-    margin-top: 1.2rem;
+    margin-top: 19.2px;
     height: 40px;
     width: 40px;
     clip-path: circle(60px at center);
@@ -27,7 +27,7 @@
 
   &__name {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   &__symbol {
@@ -55,15 +55,19 @@
   }
 
   &__price-down {
-    background-color: #f00606;
+    background-color: #ee0a0a;
     height: 68px;
   }
 
   .fa-1x {
-    font-size: 2em;
+    font-size: 14px;
   }
 
-  svg {
+  .fa-caret-up {
+    background-color: transparent;
+  }
+
+  .fa-caret-down {
     background-color: transparent;
   }
 
