@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import React from 'react'
 import axios from 'axios'
 import CoinInfo from './Components/CoinInfo/CoinInfo'
+import Image from './Components/Image/Image'
+import Logo from './Images/crypto-logo.png'
 import './App.scss'
 
 const App = () => {
@@ -31,6 +33,7 @@ const App = () => {
   return (
     <section className="app">
       <div className="app__header">
+        <Image className="app__logo" src={Logo} alt="CryptoTracker.link logo" />
         <h1 className="app__heading">CryptoTracker.link</h1>
         <form>
           <input
