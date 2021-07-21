@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import axios from 'axios'
-import CoinInfo from './Components/CoinInfo/CoinInfo'
+import CoinData from './Components/CoinData/CoinData'
 import Image from './Components/Image/Image'
 import Logo from './Images/crypto-logo.png'
 import './App.scss'
@@ -26,7 +26,7 @@ const App = () => {
     setSearch(e.target.value)
   }
 
-  const filteredCoinInfo = coins.filter(coin =>
+  const filteredCoinData = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
 
@@ -45,9 +45,9 @@ const App = () => {
         </form>
       </div>
       <div className=" app__container">
-        {filteredCoinInfo.map(coin => {
+        {filteredCoinData.map(coin => {
           return (
-            <CoinInfo
+            <CoinData
               key={coin.id}
               name={coin.name}
               price={coin.current_price}

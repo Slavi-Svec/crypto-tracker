@@ -1,7 +1,7 @@
 import React from 'react'
-import './CoinInfo.scss'
+import './CoinData.scss'
 
-const CoinInfo = ({
+const CoinData = ({
   image,
   symbol,
   name,
@@ -55,4 +55,4 @@ const CoinInfo = ({
   )
 }
 
-export default CoinInfo
+export default CoinData
