@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import React from 'react'
+import { React, useEffect, useState } from 'react'
 import axios from 'axios'
 import CoinData from './Components/CoinData/CoinData'
+import FearAndGreed from './Components/FearAndGreed/FearAndGreed'
 import Image from './Components/Image/Image'
 import Logo from './Images/crypto-logo.png'
 import './App.scss'
@@ -35,6 +35,7 @@ const App = () => {
       <div className="app__header">
         <Image className="app__logo" src={Logo} alt="CryptoTracker.link logo" />
         <h1 className="app__heading">CryptoTracker.link</h1>
+        <FearAndGreed />
         <form>
           <input
             className="app__input-field"
