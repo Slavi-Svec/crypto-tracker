@@ -21,7 +21,7 @@ const FearAndGreed = () => {
   return (
     <section className="fear-and-greed">
       <h4>
-        Fear and Greed Index is
+        Fear and Greed Index is&nbsp;
         <b className="fng-number-score">{fngNumberScore}</b>
       </h4>
       <h3>{fngValueClassification}</h3>
