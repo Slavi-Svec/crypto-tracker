@@ -24,7 +24,13 @@ const FearAndGreed = () => {
         Fear and Greed Index is&nbsp;
         <b className="fng-number-score">{fngNumberScore}</b>
       </h4>
-      <h3>{fngValueClassification}</h3>
+      <h3
+        className={`${fngValueClassification
+          .replace(/\s/g, '-')
+          .toLowerCase()}`}
+      >
+        {fngValueClassification}
+      </h3>
     </section>
   )
 }
