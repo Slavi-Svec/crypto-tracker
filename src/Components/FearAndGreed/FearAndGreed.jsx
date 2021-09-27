@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import axios from 'axios'
+import Loader from '../Loader/Loader'
 import './styles.scss'
 
 // 'fearAndGreed' is abbreviated to 'fng'
@@ -17,6 +18,8 @@ const FearAndGreed = () => {
 
       .catch(error => console.error(error))
   }, [])
+
+  if (!fngValueClassification) return <Loader className="loader" />
 
   return (
     <section className="fear-and-greed">
