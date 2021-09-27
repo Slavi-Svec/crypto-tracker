@@ -4,6 +4,7 @@ import CoinData from './Components/CoinData/CoinData'
 import FearAndGreed from './Components/FearAndGreed/FearAndGreed'
 import Image from './Components/Image/Image'
 import Logo from './Images/crypto-logo.png'
+import ScrollButton from './Components/ScrollButton/ScrollButton'
 import './App.scss'
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
 
   return (
     <section className="app">
+      <ScrollButton />
       <div className="app__header">
         <Image className="app__logo" src={Logo} alt="CryptoTracker.link logo" />
         <h1 className="app__heading">CryptoTracker.link</h1>

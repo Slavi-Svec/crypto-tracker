@@ -1,0 +1,18 @@
+.back-to-top {
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  right: 8px;
+  width: 30px;
+  font-size: 25px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 5px 10px #ccc;
+}
+
+.back-to-top:hover {
+  background: red;
+}
