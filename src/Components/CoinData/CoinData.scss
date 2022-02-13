@@ -15,6 +15,9 @@
     height: 40px;
     width: 40px;
     clip-path: circle(60px at center);
+    &.bg-white{
+      background-color: white;
+    }
   }
 
   &__wrapper {

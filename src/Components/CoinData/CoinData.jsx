@@ -1,5 +1,6 @@
-import React from 'react'
-import './CoinData.scss'
+import classNames from "classnames";
+import React from "react";
+import "./CoinData.scss";
 
 const CoinData = ({
   image,
@@ -9,18 +10,30 @@ const CoinData = ({
   ath,
   marketcap,
   volume,
-  priceChange
+  priceChange,
+  bgWhite
 }) => {
+  const renderDecimalPrice = (price) => {
+    if (parseFloat(price) < 100) return price;
+    return price.toLocaleString();
+  };
+
   return (
     <section className="coin">
       <div className="coin__crypto-coin">
-        <img src={image} alt={`${name}`} className="coin__coin-logo" />
+        <img
+          src={image}
+          alt={`${name}`}
+          className={classNames("coin__coin-logo", {
+            "bg-white": bgWhite
+          })}
+        />
         <div className="coin__wrapper">
           <h1 className="coin__name">{name}</h1>
           <p className="coin__symbol">{symbol}</p>
         </div>
-        <p className="coin__price">${price.toLocaleString()}</p>
-        <p className="coin__ath">All Time High: ${ath.toLocaleString()}</p>
+        <p className="coin__price">${renderDecimalPrice(price)}</p>
+        <p className="coin__ath">All Time High: ${renderDecimalPrice(ath)}</p>
         <p className="coin__market-cap">
           Market Cap: ${marketcap.toLocaleString()}
         </p>
@@ -36,7 +49,7 @@ const CoinData = ({
                   </p>
                 </div>
               </div>
-            )
+            );
           } else {
             return (
               <div className="coin__price-indicator">
@@ -47,12 +60,12 @@ const CoinData = ({
                   </p>
                 </div>
               </div>
-            )
+            );
           }
         })()}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CoinData
+export default CoinData;
